@@ -1,0 +1,21 @@
+.floatingDiv {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+  padding: .1rem 2rem;
+  height: 9rem;
+}
+.floatingDiv img {
+  transform: scale(.5);
+}
+
+@media (max-width: 500px) {
+  .floatingDiv {
+    transform: scale(.7);
+  } 
+}

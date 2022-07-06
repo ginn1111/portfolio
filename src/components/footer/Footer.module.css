@@ -1,0 +1,35 @@
+.footerContainer {
+  background-image: url('../../img/wave.png');
+  background-position: -10rem;
+  margin-inline: -10rem;
+  margin-bottom: -.5rem;
+  position: relative;
+  height: 60vh;
+}
+.information {
+  color: #fff;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+.information > span {
+  letter-spacing: 0.2rem;
+}
+.contacts {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.contacts > * {
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .footerContainer {
+    margin-top: 5rem;
+  } 
+}

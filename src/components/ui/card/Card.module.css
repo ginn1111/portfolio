@@ -1,0 +1,52 @@
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  border: 0.7rem solid var(--orangeCard);
+  border-radius: 1rem;
+  width: 28rem;
+  height: 30rem;
+  padding-inline: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.26);
+}
+.emoji {
+  transform: scale(0.65);
+}
+.title {
+  font-size: 2rem;
+}
+.message {
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+  color: var(--gray);
+}
+.button {
+  margin-block: auto;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  color: #5c8df5;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  background-color: transparent;
+  transform: scale(0.9);
+  transition: background-color 200ms, transform 200ms;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  transform: scale(1);
+}
+
+@media (max-width: 500px) {
+  .card {
+    position: static;
+  } 
+}

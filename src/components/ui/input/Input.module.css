@@ -1,0 +1,26 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.input > input,
+textarea {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 0.3rem solid var(--orange);
+  outline: none;
+  border-radius: 0.75rem;
+  font-size: 1.8rem;
+  font-family: 'Gumela';
+}
+.input > textarea::placeholder,
+.input > input::placeholder {
+  font-family: 'Gumela';
+}
+.input > label {
+  font-size: 1.8rem;
+}
+.input + .input {
+  margin-top: 4rem;
+}

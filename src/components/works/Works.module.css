@@ -1,0 +1,115 @@
+.works {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.left,
+.right {
+  flex: 1;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  width: 20rem;
+  margin-top: 5rem;
+}
+.right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainCircle {
+  position: relative;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: var(--smboxShadow);
+}
+.secCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  border: 0.5rem solid var(--grayBlur);
+  background-color: #fff;
+  box-shadow: var(--boxShadow);
+}
+.secCircle:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.secCircle:nth-child(2) {
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.secCircle:nth-child(3) {
+  top: 50%;
+  left: -15%;
+  transform: translateY(-50%);
+}
+.secCircle:nth-child(4) {
+  top: 50%;
+  right: -15%;
+  transform: translateY(-50%);
+}
+.secCircle:nth-child(5) {
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.secCircle > img {
+  transform: scale(0.5);
+}
+.misc2,
+.misc1 {
+  position: absolute;
+  left: 45%;
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
+  z-index: -99;
+}
+.misc1 {
+  top: 35%;
+  background-color: #1949b8;
+}
+.misc2 {
+  bottom: 35%;
+  background-color: #f5c32c;
+}
+@media (max-width: 500px) {
+  .works {
+    flex-direction: column;
+  }
+  .left {
+    margin-top: 30rem;
+    align-items: center;
+  }
+  .right {
+    margin-top: 10rem;
+  }
+  .mainCircle {
+    width: 20rem;
+    height: 20rem;
+  }
+  .secCircle {
+    width: 7rem;
+    height: 7rem;
+  }
+  .secCircle > img {
+    transform: scale(.3)
+  }
+  .misc2, .misc1 {
+    width: 15rem;
+    height: 15rem
+  }
+}

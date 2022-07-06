@@ -1,0 +1,22 @@
+.servicesAwesome {
+  font-size: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.servicesAwesome > :nth-child(1) {
+  font-weight: bold;
+}
+.servicesAwesome > :nth-child(2) {
+  color: var(--orange);
+  font-weight: bold;
+}
+.servicesAwesome > :nth-child(3) {
+  font-size: 1.5rem;
+  color: var(--gray);
+}
+@media (max-width: 500px) {
+  .servicesAwesome {
+    font-size: 3rem;
+  }  
+}

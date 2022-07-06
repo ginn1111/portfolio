@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Gumela;
+  src: url(./fonts/Gumela\ Regular.otf);
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-padding-top: 100px;
+  font-size: 62.5%;
+  line-height: 1.5;
+  font-family: 'Gumela', sans-serif;
+}
+body {
+  font-size: 2rem;
+}

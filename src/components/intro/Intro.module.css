@@ -1,0 +1,122 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.introRight,
+.introLeft {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex: 1;
+}
+.introRight > img {
+  transition: transform 300ms;
+  position: absolute;
+  top: 5%;
+  transform: scale(0.6);
+}
+.introName,
+.introLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.introImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  background: url('../../img/boy.png') center bottom 70% / 60%,
+    url('../../img/Vector2.png') center / 80%,
+    url('../../img/Vector1.png') right 70% top 40% / 80%;
+  background-repeat: no-repeat;
+}
+.hireMeBtn {
+  margin-top: 3rem;
+  width: 20rem;
+}
+.introIcons {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.introIcons > * {
+  transform: scale(0.5);
+  cursor: pointer;
+}
+.introImage > img {
+  position: absolute;
+  z-index: 1;
+}
+.introImage > img:nth-child(3) {
+  left: 17%;
+  transform: scale(1.2);
+  top: -22rem;
+}
+.introImage > img:nth-child(2) {
+  top: -32rem;
+  transform: scale(0.6);
+  right: 0%;
+}
+.introImage > img:nth-child(1) {
+  transform: scale(0.7);
+  right: 10%;
+  top: -27.5rem;
+}
+
+@media (max-width: 1200px) {
+  .introImage > img:nth-child(3) {
+    left: 17%;
+    transform: scale(1.2);
+    top: -22rem;
+  }
+  .introImage > img:nth-child(2) {
+    top: -32rem;
+    transform: scale(0.6);
+    right: -22%;
+  }
+  .introImage > img:nth-child(1) {
+    transform: scale(0.7);
+    right: -12%;
+    top: -27.5rem;
+  }
+}
+/* tablet */
+@media (max-width: 980px) and (min-width: 481px) {
+  .introImage {
+    left: 60%;
+  }
+  .introRight > img {
+    transform: scale(0.4);
+  }
+}
+
+@media (max-width: 500px) {
+  .intro {
+    margin-top: 5rem;
+    flex-direction: column;
+    gap: 20rem;
+  }
+  .introImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100%;
+    background: url('../../img/boy.png') center bottom 55% / 80%,
+      url('../../img/Vector2.png') center / 100%,
+      url('../../img/Vector1.png') right 70% top 45% / 100%;
+    background-repeat: no-repeat;
+  }
+  .introRight > img {
+    transform: scale(0.3);
+    top: -21rem;
+  }
+}
