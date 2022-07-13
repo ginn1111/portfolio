@@ -17,11 +17,7 @@ const Services = () => {
   return (
     <div id="Services" className={styles.services}>
       <section className={styles.servicesLeft}>
-        <Typography
-          title="My Awesome"
-          subTitle="Services"
-          detail="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, natus. Minus perspiciatis, quis temporibus suscipit est, tempora quibusdam dolorum commodi labore et in dolor laborum optio ipsam itaque deserunt eveniet!"
-        />
+        <Typography title="My Awesome" subTitle="Services" />
         <a href={Resume} download>
           <button className={clsx('button', styles.downloadCVBtn)}>
             Download CV
@@ -59,7 +55,7 @@ const Services = () => {
           <Card
             emoji={HeartEmoji}
             title="Language"
-            message="HTML5, CSS3, Javascript, Java, SQL"
+            message="HTML5, CSS3, Javascript, Java, SQL, Typescript(basic)"
             position={{ top: '-5%' }}
           />
         </motion.div>
@@ -75,7 +71,7 @@ const Services = () => {
           <Card
             emoji={Glasses}
             title="Framework, Library"
-            message="ReactJS, Spring MVC, NodeJS "
+            message="ReactJS, Spring MVC, Tailwindcss, Redux "
             position={{ top: '40%', left: '50%' }}
           />
         </motion.div>

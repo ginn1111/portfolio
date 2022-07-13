@@ -3,10 +3,9 @@ import useResponsive from '../../hooks/useResponsive';
 import styles from './Portfolio.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import Hoc from '../../img/hoc.png';
-import Sidebar from '../../img/sidebar.png';
-import Ecommerce from '../../img/ecommerce.png';
-import MusicApp from '../../img/musicapp.png';
+import PortfolioProject from '../../img/portfolio.jpg';
+import ChatApp from '../../img/chat-app.jpg';
+import EmployeeManager from '../../img/employee-manager.jpg';
 import Theme from '../ui/theme/Theme';
 
 const Portfolio = () => {
@@ -27,16 +26,13 @@ const Portfolio = () => {
           className={styles.swiper}
         >
           <SwiperSlide className={styles.swiperSlide}>
-            <img src={Hoc} alt="HOC" />
+            <img src={ChatApp} alt="chat-app" />
           </SwiperSlide>
           <SwiperSlide className={styles.swiperSlide}>
-            <img src={Ecommerce} alt="Ecommerce" />
+            <img src={PortfolioProject} alt="portfolio-project" />
           </SwiperSlide>
           <SwiperSlide className={styles.swiperSlide}>
-            <img src={MusicApp} alt="MusicApp" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiperSlide}>
-            <img src={Sidebar} alt="Sidebar" />
+            <img src={EmployeeManager} alt="employee-manager" />
           </SwiperSlide>
         </Swiper>
       </div>

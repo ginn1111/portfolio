@@ -16,6 +16,14 @@ const Contact = () => {
   const form = useRef();
   const submitFormHandler = async (event) => {
     event.preventDefault();
+
+    console.log(form.current);
+    console.log(form.current.querySelector('input[name="from_name"]').value);
+    console.log(form.current.querySelector('input[name="reply_to"]').value);
+    console.log(form.current.querySelector('textarea[name="message"]').value);
+
+    return;
+
     setIsSubmit(true);
     try {
       setIsLoading(true);
@@ -25,9 +33,7 @@ const Contact = () => {
         form.current,
         'O4MO1CI_CITBwFKyx',
       );
-      console.log(response.text);
     } catch (error) {
-      console.log(error.text);
     } finally {
       setIsLoading(false);
     }

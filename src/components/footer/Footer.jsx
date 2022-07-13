@@ -10,10 +10,10 @@ const Footer = () => {
       <div className={styles.information}>
         <span>vanthuanjw@gmail.com</span>
         <div className={styles.contacts}>
-          <a href="https://github.com/ginn1111">
+          <a href="https://github.com/ginn1111" target="blank">
             <Github color="#fff" size="6rem" />
           </a>
-          <a href="https://www.facebook.com/vanthuan1309">
+          <a href="https://www.facebook.com/vanthuan1309" target="blank">
             <Facebook color="#fff" size="6rem" />
           </a>
           <a>

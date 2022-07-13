@@ -26,6 +26,9 @@
 }
 .swiperContainer img {
   height: 23rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: left top;
   border-radius: 1rem;
   box-shadow: -0.5rem 1rem 1rem #0000004a;
 }

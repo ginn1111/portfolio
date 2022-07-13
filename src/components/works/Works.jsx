@@ -2,11 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import Typography from '../ui/typography/Typography';
 import styles from './Works.module.css';
-import Amazon from '../../img/amazon.png';
-import Fiverr from '../../img/fiverr.png';
-import Shopify from '../../img/Shopify.png';
-import Facebook from '../../img/Facebook.png';
-import UpWork from '../../img/Upwork.png';
+// import Amazon from '../../img/amazon.png';
+// import Fiverr from '../../img/fiverr.png';
+// import Shopify from '../../img/Shopify.png';
+// import Facebook from '../../img/Facebook.png';
+// import UpWork from '../../img/Upwork.png';
 import { motion } from 'framer-motion';
 
 const Works = () => {
@@ -30,7 +30,7 @@ const Works = () => {
           transition={{ duration: 3.5, type: 'spring' }}
           className={styles.mainCircle}
         >
-          <div className={styles.secCircle}>
+          {/* <div className={styles.secCircle}>
             <img src={Amazon} alt="Amazon" />
           </div>
           <div className={styles.secCircle}>
@@ -44,7 +44,7 @@ const Works = () => {
           </div>
           <div className={styles.secCircle}>
             <img src={Fiverr} alt="Fiverr" />
-          </div>
+          </div> */}
         </motion.div>
         <div className={styles.misc1}></div>
         <div className={styles.misc2}></div>

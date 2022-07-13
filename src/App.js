@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
@@ -12,40 +12,47 @@ import Testimonial from './components/testimonial/Testimonial';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import useTheme from './hooks/useTheme';
-import ArrowOnTop from '@iconscout/react-unicons/icons/uil-arrow-up'
+import ArrowOnTop from '@iconscout/react-unicons/icons/uil-arrow-up';
 
 function App() {
   const [isMoon] = useTheme();
-  const [isShowOnTop, setIsShowOnTop] = useState(false)
+  const [isShowOnTop, setIsShowOnTop] = useState(false);
 
   useEffect(() => {
-    function watchScrollHandler()  {
-      if(window.scrollY >= 500) {
-        setIsShowOnTop(true)
+    function watchScrollHandler() {
+      if (window.scrollY >= 500) {
+        setIsShowOnTop(true);
       } else {
-        setIsShowOnTop(false)
+        setIsShowOnTop(false);
       }
     }
 
-    console.log(window.innerWidth)
-
     window.addEventListener('scroll', watchScrollHandler);
-    
+
     return () => window.removeEventListener('scroll', watchScrollHandler);
-  }, [])
+  }, []);
   return (
-    <div className="App" id="/" style={{ backgroundColor: isMoon ? 'black' : '' }}>
-      <div className='scrollOnTop' style={{transform: !isShowOnTop ? 'translateX(200%)' : ''}}><Link to='/' smooth={true}>
-<ArrowOnTop size="4rem" color="var(--orange)"/>
-        </Link></div>
+    <div
+      className="App"
+      id="/"
+      style={{ backgroundColor: isMoon ? 'black' : '' }}
+    >
+      <div
+        className="scrollOnTop"
+        style={{ transform: !isShowOnTop ? 'translateX(200%)' : '' }}
+      >
+        <Link to="/" smooth={true}>
+          <ArrowOnTop size="4rem" color="var(--orange)" />
+        </Link>
+      </div>
       <GlobalCss>
         <Navbar />
         <Intro />
         <Services />
         <Experience />
-        <Works />
+        {/* <Works /> */}
         <Portfolio />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <Contact />
         <Footer />
       </GlobalCss>

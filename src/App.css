@@ -34,6 +34,9 @@
   transition: transform 300ms;
   cursor: pointer;
 }
+.scrollOnTop a {
+  display: flex;
+}
 @keyframes onTopAnimate {
   from {
     opacity: 0;

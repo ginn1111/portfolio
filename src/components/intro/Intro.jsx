@@ -48,8 +48,8 @@ const Intro = () => {
           responsiveStatus === 'MOBILE'
             ? { top: '-20rem', left: '25%' }
             : responsiveStatus === 'TABLET'
-            ? { top: '35%', left: '100%' }
-            : { top: '10%', left: '100%' }
+            ? { top: '35%' }
+            : { top: '10%' }
         }
       />
       <FloatingDiv
@@ -59,16 +59,14 @@ const Intro = () => {
             ? { left: '-40%' }
             : responsiveStatus === 'TABLET'
             ? { left: '-20%' }
-            : { left: '-5%' }
+            : { left: '0%' }
         }
         transition={motionTransition}
         img={thumbup}
         txt1={'Spring'}
         txt2={'MVC'}
         position={
-          responsiveStatus === 'TABLET'
-            ? { top: '55%', left: '10%' }
-            : { top: '67%', left: '10%' }
+          responsiveStatus === 'TABLET' ? { top: '55%' } : { top: '67%' }
         }
       />
       <Blur
@@ -95,13 +93,19 @@ const Intro = () => {
             detail="Front-end developer (fresher level), who is eager with studying and persist!"
           />
         </div>
-        <button className={clsx('button', styles.hireMeBtn)}>Hire me</button>
+        <Link
+          to="Contact"
+          className={clsx('button', styles.hireMeBtn)}
+          smooth={true}
+        >
+          Hire me
+        </Link>
         <div className={styles.introIcons}>
-          <a href="https://github.com/ginn1111">
+          <a href="https://github.com/ginn1111" target="blank">
             <img src={Github} alt="github" />
           </a>
           <img src={Linkedin} alt="linkedin" />
-          <a href="https://www.facebook.com/vanthuan1309">
+          <a href="https://www.facebook.com/vanthuan1309" target="blank">
             <img src={Instagram} alt="instagram" />
           </a>
         </div>

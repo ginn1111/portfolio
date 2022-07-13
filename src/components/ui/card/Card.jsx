@@ -15,7 +15,7 @@ const Card = ({ emoji, title, message, position }) => {
         <img className={styles.emoji} src={emoji} alt="emoji" />
         <h5 className={styles.title}>{title}</h5>
         <p className={styles.message}>{message}</p>
-        <button className={styles.button}>Learn more</button>
+        {/* <button className={styles.button}>Learn more</button> */}
       </div>
     </Theme>
   );
