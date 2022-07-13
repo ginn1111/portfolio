@@ -17,17 +17,10 @@ const Contact = () => {
   const submitFormHandler = async (event) => {
     event.preventDefault();
 
-    console.log(form.current);
-    console.log(form.current.querySelector('input[name="from_name"]').value);
-    console.log(form.current.querySelector('input[name="reply_to"]').value);
-    console.log(form.current.querySelector('textarea[name="message"]').value);
-
-    return;
-
     setIsSubmit(true);
     try {
       setIsLoading(true);
-      const response = await emailjs.sendForm(
+      await emailjs.sendForm(
         'service_vjs9bdi',
         'template_amkmsk8',
         form.current,
