@@ -8,7 +8,9 @@ const Typography = ({ title, subTitle, detail }) => {
       <div className={styles.servicesAwesome}>
         <span>{title}</span>
         <span>{subTitle}</span>
-        <span>{detail}</span>
+        {detail && detail.split('\\n').map(d => (
+          <p key={d}>{d}</p>
+        ))}
       </div>
     </Theme>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-scroll';
 import useResponsive from '../../hooks/useResponsive';
 import clsx from 'clsx';
@@ -13,67 +13,81 @@ import FloatingDiv from '../floating-div/FloatingDiv';
 import Blur from '../../components/ui/blur/Blur';
 import Typography from '../ui/typography/Typography';
 import { motion } from 'framer-motion';
+import { getAvatar } from '../services/firebase';
+import ContactItem from './ContactItem';
+import AvatarPlaceholder from '../../img/avatar-placeholder.png';
 
 const Intro = () => {
-  const motionTransition = { duration: 2, type: 'spring' };
-  const responsiveStatus = useResponsive();
+  const motionTransition = { stiffness: 60, damping: 10, type: 'spring' };
+  const { isTablet, isMobile } = useResponsive();
+
+  const avatarRef = React.useRef();
+
+  React.useEffect(() => {
+    let url;
+    getAvatar((blob) => {
+      url = URL.createObjectURL(blob);
+      avatarRef.current.src = url;
+    });
+    return () => URL.revokeObjectURL(url);
+  }, []);
   const introRightSection = (
     <section className={styles.introRight}>
-      <div className={styles.introImage}></div>
+      <div className={styles.introImage}>
+        <div className={styles.imageContainer}>
+          <img
+            alt="avatar"
+            ref={avatarRef}
+            loading="lazy"
+            src={AvatarPlaceholder}
+          />
+        </div>
+        <FloatingDiv
+          whileInView={{
+            left: isTablet ? '28%' : isMobile ? '25%' : '60%',
+          }}
+          transition={motionTransition}
+          img={Crown}
+          txt1={'ReactJS'}
+          txt2={'NextJS'}
+          position={{
+            top: isTablet ? '13%' : isMobile ? '5%' : '0%',
+            left: '100%',
+          }}
+        />
+        <FloatingDiv
+          whileInView={{
+            left: '-10%',
+          }}
+          transition={motionTransition}
+          img={thumbup}
+          txt1={'JavaScript'}
+          txt2={'TypeScript'}
+          position={{
+            left: '-50%',
+            top: isTablet ? '70%' : '75%',
+          }}
+        />
+      </div>
       <motion.img
-        initial={{ left: '-50%' }}
-        whileInView={
-          responsiveStatus === 'MOBILE'
-            ? { top: '-22rem', left: '-60%' }
-            : { left: '-25%' }
-        }
-        transition={motionTransition}
+        initial={{ left: isMobile ? '70%' : '-50%' }}
+        whileInView={{
+          left: isTablet ? '-40%' : isMobile ? '45%' : '-25%',
+        }}
+        transition={{
+          ...motionTransition,
+          stiffness: 50,
+          damping: 5,
+        }}
         src={glassesimoji}
         alt="glasses emoji"
       />
-      <FloatingDiv
-        initial={{ left: '100%' }}
-        whileInView={
-          responsiveStatus === 'MOBILE'
-            ? { top: '-15rem', left: '25%' }
-            : responsiveStatus === 'TABLET'
-            ? { left: '45%' }
-            : { left: '60%' }
-        }
-        transition={motionTransition}
-        img={Crown}
-        txt1={'ReactJS'}
-        txt2={'Developer'}
-        position={
-          responsiveStatus === 'MOBILE'
-            ? { top: '-20rem', left: '25%' }
-            : responsiveStatus === 'TABLET'
-            ? { top: '35%' }
-            : { top: '10%' }
-        }
-      />
-      <FloatingDiv
-        initial={{ left: '10%' }}
-        whileInView={
-          responsiveStatus === 'MOBILE'
-            ? { left: '-40%' }
-            : responsiveStatus === 'TABLET'
-            ? { left: '-20%' }
-            : { left: '0%' }
-        }
-        transition={motionTransition}
-        img={thumbup}
-        txt1={'Spring'}
-        txt2={'MVC'}
-        position={
-          responsiveStatus === 'TABLET' ? { top: '55%' } : { top: '67%' }
-        }
-      />
+
       <Blur
         backgroundColor="var(--purple)"
         top="20%"
-        right="-10%"
-        filterBlur="5rem"
+        right="10%"
+        filterBlur="10rem"
       />
       <Blur
         backgroundColor="#b3caff"
@@ -89,7 +103,7 @@ const Intro = () => {
         <div className={styles.introName}>
           <Typography
             title="Hi! I am"
-            subTitle="Phạm Văn Thuận"
+            subTitle="Phạm Văn Thuận,"
             detail="Front-end developer (fresher level), who is eager with studying and persist!"
           />
         </div>
@@ -101,13 +115,15 @@ const Intro = () => {
           Hire me
         </Link>
         <div className={styles.introIcons}>
-          <a href="https://github.com/ginn1111" target="blank">
-            <img src={Github} alt="github" />
-          </a>
-          <img src={Linkedin} alt="linkedin" />
-          <a href="https://www.facebook.com/vanthuan1309" target="blank">
-            <img src={Instagram} alt="instagram" />
-          </a>
+          <ContactItem
+            url="https://www.linkedin.com/in/ph%E1%BA%A1m-v%C4%83n-thu%E1%BA%ADn-47670a201/"
+            icon={Linkedin}
+          />
+          <ContactItem url="https://github.com/ginn1111" icon={Github} />
+          <ContactItem
+            url="https://www.facebook.com/vanthuan1309"
+            icon={Instagram}
+          />
         </div>
       </section>
       {introRightSection}

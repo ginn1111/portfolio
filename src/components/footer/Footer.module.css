@@ -1,24 +1,29 @@
 .footerContainer {
-  background-image: url('../../img/wave.png');
-  background-position: -10rem;
+  background-color: var(--yellow);
   margin-inline: -10rem;
-  margin-bottom: -.5rem;
+  margin-bottom: -0.5rem;
   position: relative;
-  height: 60vh;
+  height: 12rem;
 }
 .information {
+  display: flex;
   color: #fff;
   position: absolute;
-  bottom: 30%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  justify-content: center;
+  height: 100%;
 }
-.information > span {
+.information > a {
   letter-spacing: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: white;
 }
 .contacts {
   display: flex;
@@ -28,8 +33,9 @@
 .contacts > * {
   cursor: pointer;
 }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .footerContainer {
+    font-size: 1.8rem;
     margin-top: 5rem;
-  } 
+  }
 }

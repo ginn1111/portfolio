@@ -3,36 +3,57 @@ import useResponsive from '../../hooks/useResponsive';
 import styles from './Portfolio.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import PortfolioProject from '../../img/portfolio.jpg';
-import ChatApp from '../../img/chat-app.jpg';
-import EmployeeManager from '../../img/employee-manager.jpg';
+import PortfolioProject from '../../img/portfolio.png';
+import ChatApp from '../../img/web-chat.png';
+import EmployeeManager from '../../img/employee-manager.png';
 import Theme from '../ui/theme/Theme';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import PortfolioItem from './PortfolioItem';
 
 const Portfolio = () => {
-  const responsiveStatus = useResponsive();
   return (
     <div id="Portfolio" className={styles.portfolio}>
       <div className={styles.headSection}>
         <Theme>
-          <h3>Recent Project</h3>
+          <h3>Recent Projects</h3>
         </Theme>
-        <span>Portfolio</span>
       </div>
       <div className={styles.swiperContainer}>
         <Swiper
-          // slidesPerView={}
           spaceBetween={30}
-          grabCursor={true}
-          className={styles.swiper}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          pagination={{ clickable: true }}
+          modules={[Pagination, Autoplay]}
+          className="mySwiper"
         >
-          <SwiperSlide className={styles.swiperSlide}>
-            <img src={ChatApp} alt="chat-app" />
+          <SwiperSlide>
+            <PortfolioItem
+              link="https://github.com/ginn1111/chat-app"
+              title="Web chat"
+              picture={ChatApp}
+              demoLink="https://tnt-team-web-chat.vercel.app/"
+            />
           </SwiperSlide>
-          <SwiperSlide className={styles.swiperSlide}>
-            <img src={PortfolioProject} alt="portfolio-project" />
+          <SwiperSlide>
+            <PortfolioItem
+              link="https://github.com/ginn1111/portfolio"
+              title="Portfolio"
+              picture={PortfolioProject}
+              demoLink="#"
+            />
           </SwiperSlide>
-          <SwiperSlide className={styles.swiperSlide}>
-            <img src={EmployeeManager} alt="employee-manager" />
+          <SwiperSlide>
+            <PortfolioItem
+              link="https://github.com/ginn1111/employee-manage"
+              title="Employee management"
+              picture={EmployeeManager}
+              demoLink="https://www.youtube.com/watch?v=JQLCQvBjVck"
+            />
           </SwiperSlide>
         </Swiper>
       </div>

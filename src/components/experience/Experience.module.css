@@ -1,9 +1,9 @@
 .experience {
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 17rem;
+  margin-block: 50rem 20rem;
 }
 .experienceSection {
   display: flex;
@@ -45,10 +45,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (max-width: 500px) {
+@media only screen and (max-width: 1180px) and (min-width: 767px) {
+}
+@media only screen and (max-width: 767px) {
   .experience {
     flex-direction: column;
-    margin-top: 100vh;
-    gap: 5rem;
+    margin-block: 10rem;
+    gap: 10rem;
   }
 }

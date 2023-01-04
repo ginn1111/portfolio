@@ -1,13 +1,13 @@
-import React from 'react';
-import styles from './Card.module.css';
-import Theme from '../theme/Theme';
+import React from "react";
+import styles from "./Card.module.css";
+import Theme from "../theme/Theme";
 
 const Card = ({ emoji, title, message, position }) => {
   const positionStyles = {
-    top: `${position?.top ?? 'unset'}`,
-    left: `${position?.left ?? 'unset'}`,
-    bottom: `${position?.bottom ?? 'unset'}`,
-    right: `${position?.right ?? 'unset'}`,
+    top: `${position?.top ?? "unset"}`,
+    left: `${position?.left ?? "unset"}`,
+    bottom: `${position?.bottom ?? "unset"}`,
+    right: `${position?.right ?? "unset"}`,
   };
   return (
     <Theme>

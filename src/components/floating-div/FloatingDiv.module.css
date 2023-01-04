@@ -4,18 +4,26 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 2rem;
   background-color: white;
-  border-radius: 2rem;
-  padding: .1rem 2rem;
   height: 9rem;
+  gap: 0;
+  padding-right: 2rem;
+  border-radius: 1.5rem;
+  font-size: 1.8rem;
 }
 .floatingDiv img {
-  transform: scale(.5);
+  transform: scale(0.4);
+}
+@media only screen and (min-width: 1181px) {
+  .floatingDiv img {
+    transform: scale(0.5);
+  }
+  .floatingDiv {
+    border-radius: 2rem;
+    gap: 2rem;
+    padding-inline: 2rem;
+  }
 }
 
-@media (max-width: 500px) {
-  .floatingDiv {
-    transform: scale(.7);
-  } 
+@media only screen and (min-width: 767px) and (max-width: 1180px) {
 }

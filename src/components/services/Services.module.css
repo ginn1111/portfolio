@@ -1,6 +1,10 @@
 .services {
-  height: 100vh;
   display: flex;
+  height: 50rem;
+}
+.serviceCard {
+  height: 100%;
+  position: absolute;
 }
 .servicesRight {
   height: 100%;
@@ -36,20 +40,18 @@
   width: 20rem;
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 767px) {
+  .serviceCard {
+    position: static;
+  }
+  .serviceCard + .serviceCard {
+    margin-top: 1rem;
+  }
   .services {
     flex-direction: column;
+    height: auto;
   }
   .servicesRight {
-    height: unset;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  }
-  .servicesLeft {
-    align-items: center;
-    margin-block: 5rem;
+    padding-block: 5rem;
   }
 }

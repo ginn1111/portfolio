@@ -1,33 +1,39 @@
 .toggleWrapper {
   position: relative;
   cursor: pointer;
+  --height: 3.6rem;
+  --width: 6.6rem;
+  --border-width: 0.36rem;
+  --gap: 0.32rem;
+  --sw-width: 2.6rem;
 }
 .toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.2rem 0.5rem;
-  border: 0.35rem solid var(--orange);
+  border: var(--border-width) solid var(--orange);
   border-radius: 4rem;
-  gap: 0.32rem;
+  gap: var(--gap);
   color: var(--orange);
+  height: var(--height);
+  width: var(--width)
 }
 .switch {
-  padding: 1rem;
   position: absolute;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: var(--sw-width);
+  aspect-ratio: 1;
   background-color: var(--orange);
   border-radius: 50%;
-  transition: left 200ms, top 200ms, right 200ms, bottom 200ms;
+  transition: all 200ms;
 }
+.switch.sun,
 .switch.moon {
-  top: 0.45rem;
-  left: 0.45rem;
-  right: unset;
+  top: calc((var(--height) - var(--sw-width)) / 2);
 }
 .switch.sun {
-  top: 0.45rem;
-  right: 0.45rem;
-  left: unset;
+  margin-left: calc(var(--width) / 2 + var(--gap) / 2);
+}
+.switch.moon {
+  margin-left: calc(var(--border-width) + var(--gap) / 2);
 }

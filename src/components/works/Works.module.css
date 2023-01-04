@@ -14,6 +14,7 @@
 .button {
   width: 20rem;
   margin-top: 5rem;
+  text-align: center;
 }
 .right {
   position: relative;
@@ -35,9 +36,9 @@
   justify-content: center;
   position: absolute;
   border-radius: 50%;
-  width: 12rem;
-  height: 12rem;
-  border: 0.5rem solid var(--grayBlur);
+  width: 30rem;
+  aspect-ratio: 1;
+  /* border: 0.5rem solid var(--grayBlur); */
   background-color: #fff;
   box-shadow: var(--boxShadow);
 }
@@ -67,7 +68,7 @@
   transform: translateX(-50%);
 }
 .secCircle > img {
-  transform: scale(0.5);
+  transform: scale(0.7);
 }
 .misc2,
 .misc1 {

@@ -7,22 +7,40 @@ import Card from '../../components/ui/card/Card';
 import HeartEmoji from '../../img/heartemoji.png';
 import Glasses from '../../img/glasses.png';
 import Humble from '../../img/humble.png';
-import Resume from '../../other/cv.pdf';
 import Typography from '../ui/typography/Typography';
 import { motion } from 'framer-motion';
+import { getCV } from './firebase';
 
 const Services = () => {
-  const responsiveStatus = useResponsive();
-  const motionTransition = { duration: 1, type: 'spring' };
+  const { isTablet } = useResponsive();
+
+  function downloadHandler() {
+    getCV((blob) => {
+      const anchor = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      anchor.setAttribute('href', url);
+      anchor.setAttribute('download', 'Intern_FE_PhamVanThuan.pdf');
+      anchor.click();
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  const motionTransition = { stiffness: 40, damping: 7, type: 'spring' };
+
   return (
     <div id="Services" className={styles.services}>
       <section className={styles.servicesLeft}>
-        <Typography title="My Awesome" subTitle="Services" />
-        <a href={Resume} download>
-          <button className={clsx('button', styles.downloadCVBtn)}>
-            Download CV
-          </button>
-        </a>
+        <Typography
+          title="My Awesome"
+          subTitle="Services"
+          detail="Now, I am a 4th student at Post and Telecommunications Institute of Technology, my major is software engineering."
+        />
+        <button
+          onClick={downloadHandler}
+          className={clsx('button', styles.downloadCVBtn)}
+        >
+          Download CV
+        </button>
         <Blur
           backgroundColor="#abf1ff94"
           top="70%"
@@ -44,57 +62,44 @@ const Services = () => {
           filterBlur="7rem"
         />
         <motion.div
-          style={{
-            position: responsiveStatus === 'MOBILE' ? 'static' : 'absolute',
-            height: '100%',
-          }}
           initial={{ left: '100%' }}
-          whileInView={{ left: '50%' }}
+          whileInView={{ left: isTablet ? '20%' : '30%' }}
           transition={motionTransition}
+          className={styles.serviceCard}
         >
           <Card
             emoji={HeartEmoji}
             title="Language"
-            message="HTML5, CSS3, Javascript, Java, SQL, Typescript(basic)"
-            position={{ top: '-5%' }}
+            message="HTML, CSS, JavaScript, Java, SQL, TypeScript"
+            position={{ top: '5rem' }}
           />
         </motion.div>
         <motion.div
-          style={{
-            position: responsiveStatus === 'MOBILE' ? 'static' : 'absolute',
-            height: '100%',
-          }}
-          initial={{ left: '-50%' }}
-          whileInView={{ left: '-20%' }}
+          className={styles.serviceCard}
+          initial={{ left: '-100%' }}
+          whileInView={{ left: isTablet ? '-90%' : '-30%' }}
           transition={motionTransition}
         >
           <Card
             emoji={Glasses}
             title="Framework, Library"
-            message="ReactJS, Spring MVC, Tailwindcss, Redux "
-            position={{ top: '40%', left: '50%' }}
+            message="ReactJS, Spring MVC, TailwindCSS, Redux, React Hook Form, React Query"
+            position={{ top: isTablet ? '35rem' : '25rem' }}
           />
         </motion.div>
         <motion.div
-          style={{
-            position: responsiveStatus === 'MOBILE' ? 'static' : 'absolute',
-            height: '100%',
+          className={styles.serviceCard}
+          initial={{ left: '100%' }}
+          whileInView={{
+            left: isTablet ? '20%' : '35%',
           }}
-          initial={{ left: '`100%' }}
-          whileInView={
-            responsiveStatus === 'TABLET' ? { left: '50%' } : { left: '40%' }
-          }
-          transition={{ type: 'spring', duration: 2 }}
+          transition={{ ...motionTransition, stiffness: 60 }}
         >
           <Card
             emoji={Humble}
             title="Other"
             message="ChartJS, Jquery, Github, MS SQL Server"
-            position={
-              responsiveStatus === 'TABLET'
-                ? { top: '50%', left: '50%' }
-                : { top: '55%', left: '40%' }
-            }
+            position={{ top: isTablet ? '40rem' : '40rem' }}
           />
         </motion.div>
       </section>

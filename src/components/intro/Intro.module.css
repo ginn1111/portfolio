@@ -1,21 +1,13 @@
 .intro {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  height: 100vh;
+  padding-block: 10rem;
 }
 .introRight,
 .introLeft {
   width: 100%;
-  height: 100%;
   position: relative;
-  flex: 1;
-}
-.introRight > img {
-  transition: transform 300ms;
-  position: absolute;
-  top: 5%;
-  transform: scale(0.6);
 }
 .introName,
 .introLeft {
@@ -23,15 +15,29 @@
   flex-direction: column;
   justify-content: center;
 }
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer > img {
+  width: 300px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid white;
+}
 .introImage {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background: url('../../img/boy.png') center bottom 70% / 60%,
-    url('../../img/Vector2.png') center / 80%,
+  background: url('../../img/Vector2.png') center / 80%,
     url('../../img/Vector1.png') right 70% top 40% / 80%;
   background-repeat: no-repeat;
 }
@@ -47,8 +53,13 @@
   justify-content: center;
   gap: 2rem;
 }
+.introRight > img {
+  transform: scale(0.6);
+  position: absolute;
+}
 .introIcons > * {
-  transform: scale(0.5);
+  transform: scale(0.6);
+  padding: 1rem;
   cursor: pointer;
 }
 .introImage > img {
@@ -88,36 +99,38 @@
     top: -27.5rem;
   }
 }
-/* tablet */
-@media (max-width: 980px) and (min-width: 481px) {
+@media (min-width: 767px) and (max-width: 1180px) {
+  .introIcons {
+    gap: 1rem;
+  }
   .introImage {
     left: 60%;
   }
   .introRight > img {
     transform: scale(0.4);
   }
-}
-
-@media (max-width: 500px) {
-  .intro {
-    margin-top: 5rem;
-    flex-direction: column;
-    gap: 20rem;
+  .imageContainer > img {
+    width: 200px;
   }
   .introImage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100vh;
-    width: 100%;
-    background: url('../../img/boy.png') center bottom 55% / 80%,
-      url('../../img/Vector2.png') center / 100%,
-      url('../../img/Vector1.png') right 70% top 45% / 100%;
+    background: url('../../img/Vector2.png') center / 100%,
+      url('../../img/Vector1.png') right 70% top 47% / 100%;
     background-repeat: no-repeat;
   }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro {
+    flex-wrap: wrap;
+  }
+  .imageContainer > img {
+    width: 170px;
+  }
+  .introRight {
+    padding-top: 150%;
+  }
   .introRight > img {
-    transform: scale(0.3);
-    top: -21rem;
+    transform: scale(0.35) scaleX(-1);
+    top: 50%;
   }
 }

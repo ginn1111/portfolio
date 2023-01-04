@@ -17,6 +17,11 @@
   overflow: hidden;
   color: var(--black);
 }
+main {
+  max-width: 1300px;
+  min-width: 1280px;
+  margin-inline: auto;
+}
 .scrollOnTop {
   z-index: 1000000000;
   width: 6rem;
@@ -45,5 +50,11 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App {
+    padding-inline: 4rem;
   }
 }

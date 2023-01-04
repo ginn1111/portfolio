@@ -2,8 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 100vh;
-  padding: 10rem 2rem;
+  margin-block: 20rem;
 }
 .left,
 .right {
@@ -25,17 +24,19 @@
 .reply {
   text-align: center;
 }
-@media (max-width: 500px) {
+@media only screen and (min-width: 767px) and (max-width: 1180px) {
   .contactContainer {
-    /* margin-top: 10rem; */
-    /* padding: 0; */
-    flex-direction: column;
+    height: 50vh;
+    padding: 0;
   }
-  .left {
-    flex: unset;
-  }
+}
+@media only screen and (max-width: 767px) {
   .right {
-    align-items: center;
     margin-top: 5rem;
+  }
+  .contactContainer {
+    flex-direction: column;
+    margin-block: 10rem;
+    margin-top: 0;
   }
 }

@@ -10,7 +10,7 @@ const ToggleTheme = () => {
   return (
     <div onClick={onToggleTheme} className={styles.toggleWrapper}>
       <div className={styles.toggle}>
-        <Sun size="2.5rem" />
+        <Sun size="2rem" />
         <Moon size="2rem" />
       </div>
       <div

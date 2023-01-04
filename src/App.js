@@ -46,14 +46,15 @@ function App() {
         </Link>
       </div>
       <GlobalCss>
-        <Navbar />
-        <Intro />
-        <Services />
-        <Experience />
-        {/* <Works /> */}
-        <Portfolio />
-        {/* <Testimonial /> */}
-        <Contact />
+        <main>
+          <Navbar />
+          <Intro />
+          <Services />
+          <Experience />
+          <Works />
+          <Portfolio />
+          <Contact />
+        </main>
         <Footer />
       </GlobalCss>
     </div>

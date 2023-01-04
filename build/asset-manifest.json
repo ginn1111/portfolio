@@ -1,27 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.e2481a56.css",
-    "main.js": "/static/js/main.1eccca5f.js",
-    "static/media/cv.pdf": "/static/media/cv.0043ac19800e9873fec4.pdf",
-    "static/media/boy.png": "/static/media/boy.5ca4b670a32b71681d2c.png",
+    "main.css": "/static/css/main.46488ac4.css",
+    "main.js": "/static/js/main.fa447081.js",
+    "static/media/portfolio.png": "/static/media/portfolio.e755e607d2bee9321872.png",
     "static/media/glassesimoji.png": "/static/media/glassesimoji.a08bdab12e8eb56a6874.png",
-    "static/media/employee-manager.jpg": "/static/media/employee-manager.a1cb6fc87690cf7da932.jpg",
-    "static/media/portfolio.jpg": "/static/media/portfolio.303e463fcb6a1ad4836f.jpg",
+    "static/media/web-chat.png": "/static/media/web-chat.37ab6543b0fcd357ed5f.png",
+    "static/media/employee-manager.png": "/static/media/employee-manager.2223948184cc3c9c6b9d.png",
     "static/media/Gumela Regular.otf": "/static/media/Gumela Regular.0ae83c6988a536716eb4.otf",
-    "static/media/chat-app.jpg": "/static/media/chat-app.22b07e7966177ab330ce.jpg",
+    "static/media/avatar-placeholder.png": "/static/media/avatar-placeholder.297b69a6dd80fe375bed.png",
     "static/media/thumbup.png": "/static/media/thumbup.e06790ba656f0397cbe5.png",
     "static/media/humble.png": "/static/media/humble.c8b32b53675e68978981.png",
     "static/media/heartemoji.png": "/static/media/heartemoji.26b1b6ed5e0e44083b28.png",
-    "static/media/wave.png": "/static/media/wave.fdfef4069ad90f610990.png",
     "static/media/crown.png": "/static/media/crown.dbe416beae9b49b842ab.png",
     "static/media/Vector2.png": "/static/media/Vector2.28db5bfd58081dd1df1b.png",
     "static/media/glasses.png": "/static/media/glasses.71d7c1b0ff0b870a9d7d.png",
     "index.html": "/index.html",
-    "main.e2481a56.css.map": "/static/css/main.e2481a56.css.map",
-    "main.1eccca5f.js.map": "/static/js/main.1eccca5f.js.map"
+    "main.46488ac4.css.map": "/static/css/main.46488ac4.css.map",
+    "main.fa447081.js.map": "/static/js/main.fa447081.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2481a56.css",
-    "static/js/main.1eccca5f.js"
+    "static/css/main.46488ac4.css",
+    "static/js/main.fa447081.js"
   ]
 }

@@ -7,14 +7,14 @@ const Experience = () => {
     <Theme>
       <div id="Experience" className={styles.experience}>
         <section className={styles.experienceSection}>
-          <div className={styles.circle}> +3</div>
+          <div className={styles.circle}> +4</div>
           <div>
             <span> Year </span>
             <span> Student</span>
           </div>
         </section>
         <section className={styles.experienceSection}>
-          <div className={styles.circle}>+1</div>
+          <div className={styles.circle}>+3</div>
           <div>
             <span> Completed </span>
             <span> Project</span>
