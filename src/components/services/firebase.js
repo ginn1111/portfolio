@@ -21,10 +21,12 @@ export const getCV = (callback) => {
     .catch(console.log);
 };
 
-export const getAvatar = (callback) => {
+export const getAvatar = (successHandler, failedHandler) => {
   getBlob(ref(storage, "avatar.jpg"))
     .then((blob) => {
-      callback(blob);
+      successHandler(blob);
     })
-    .catch(console.log);
+    .catch(() => {
+      failedHandler();
+    });
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import useResponsive from '../../hooks/useResponsive';
 import styles from './Portfolio.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -7,7 +6,7 @@ import PortfolioProject from '../../img/portfolio.png';
 import ChatApp from '../../img/web-chat.png';
 import EmployeeManager from '../../img/employee-manager.png';
 import Theme from '../ui/theme/Theme';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import PortfolioItem from './PortfolioItem';
 
 const Portfolio = () => {
@@ -36,7 +35,7 @@ const Portfolio = () => {
               link="https://github.com/ginn1111/chat-app"
               title="Web chat"
               picture={ChatApp}
-              demoLink="https://tnt-team-web-chat.vercel.app/"
+              demoLink="https://real-time-chat-peach.vercel.app/"
             />
           </SwiperSlide>
           <SwiperSlide>

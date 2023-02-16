@@ -13,7 +13,7 @@ const Navbar = () => {
   const sticky = {
     position: 'fixed',
     inset: 0,
-    backgroundColor: isMoon ? 'black' : 'white',
+    backdropFilter: 'blur(14px)',
     zIndex: 100000000000,
     padding: '3rem 5rem',
     boxShadow: `0 8px 10px -15px ${isMoon ? 'var(--orange)' : 'black'}`,

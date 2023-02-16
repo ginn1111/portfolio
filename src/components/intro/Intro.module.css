@@ -37,7 +37,7 @@
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
-  background: url('../../img/Vector2.png') center / 80%,
+  background: url('../../img/Vector2.png') center / 75%,
     url('../../img/Vector1.png') right 70% top 40% / 80%;
   background-repeat: no-repeat;
 }

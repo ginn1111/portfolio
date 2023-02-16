@@ -49,8 +49,6 @@ const ThemeProvider = (props) => {
     setIsMoon((prev) => !prev);
   }, []);
 
-  console.log(responsive);
-
   return (
     <ThemeContext.Provider
       value={{

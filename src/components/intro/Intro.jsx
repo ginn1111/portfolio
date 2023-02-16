@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
 import useResponsive from '../../hooks/useResponsive';
 import clsx from 'clsx';
@@ -16,31 +16,44 @@ import { motion } from 'framer-motion';
 import { getAvatar } from '../services/firebase';
 import ContactItem from './ContactItem';
 import AvatarPlaceholder from '../../img/avatar-placeholder.png';
+import LoadingSpinner from '../ui/loading/LoadingSpinner';
 
 const Intro = () => {
   const motionTransition = { stiffness: 60, damping: 10, type: 'spring' };
   const { isTablet, isMobile } = useResponsive();
+  const [loading, setLoading] = React.useState(true);
 
   const avatarRef = React.useRef();
 
   React.useEffect(() => {
     let url;
-    getAvatar((blob) => {
+    const getAvatarSuccessHandler = (blob) => {
+      setLoading(false);
       url = URL.createObjectURL(blob);
       avatarRef.current.src = url;
-    });
+    }
+    const getAvatarFailedHandler = () => {
+      setLoading(false);
+      avatarRef.current.src = AvatarPlaceholder;
+    }
+
+    getAvatar(getAvatarSuccessHandler, getAvatarFailedHandler);
+
     return () => URL.revokeObjectURL(url);
   }, []);
+
+  console.log(loading)
   const introRightSection = (
     <section className={styles.introRight}>
       <div className={styles.introImage}>
         <div className={styles.imageContainer}>
-          <img
-            alt="avatar"
-            ref={avatarRef}
-            loading="lazy"
-            src={AvatarPlaceholder}
-          />
+          {loading && <LoadingSpinner />}
+          {!loading &&
+            <img
+              alt="avatar"
+              ref={avatarRef}
+            />
+          }
         </div>
         <FloatingDiv
           whileInView={{
@@ -97,6 +110,7 @@ const Intro = () => {
       />
     </section>
   );
+
   return (
     <div id="Home" className={styles.intro}>
       <section className={styles.introLeft}>

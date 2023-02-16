@@ -11,11 +11,15 @@ const Footer = () => {
       <div className={styles.information}>
         <a href="mailto:vanthuanjw@gmail.com">
           <UilEnvelopeAlt size={iconSize} />
-          vanthuanjw@gmail.com
+          <small>
+            vanthuanjw@gmail.com
+          </small>
         </a>
         <a href="tel:84365338185">
           <UilMobileAndroid size={iconSize} />
-          0365338185
+          <small>
+            0365338185
+          </small>
         </a>
       </div>
     </div>
