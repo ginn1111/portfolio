@@ -7,13 +7,16 @@ module.exports = {
     },
     extend: {
       colors: {
+        background: '#111927',
         text: {
+          DEFAULT: '#a4b1cd',
           primary: '#9fef03',
         },
         primary: '#56f3a2',
       },
       fontFamily: {
         sans: ['Exo', 'sans-serif'],
+        script: ['Pacifico', 'cursive'],
       },
     },
   },

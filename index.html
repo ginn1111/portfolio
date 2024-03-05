@@ -8,22 +8,10 @@
     <title>Portfolio of Ginn</title>
   </head>
   <body>
-    <section id="hero">
-      <div class="bg-img"></div>
-      <div class="user-avatar">
-        <img alt="user avatar" />
-      </div>
-      <h1>Phạm Văn Thuận (Ginn)</h1>
-      <ul>
-        <li>Github</li>
-        <li>Instagram</li>
-        <li>Linkedin</li>
-      </ul>
-    </section>
-    <main class="container" style="height: 1000px">
+    <main class="wrapper relative">
       <!-- HERO SECTION -->
       <div
-        class="w-screen h-screen bg-img after:absolute after:inset-0 after:bg-primary after:opacity-40"
+        class="w-screen h-screen bg-img after:absolute after:inset-0 after:bg-primary after:opacity-40 blur-sm"
       >
         <img
           alt="bg-code"
@@ -31,14 +19,30 @@
           class="w-full h-full absolute block"
         />
       </div>
+
       <div
         class="flex flex-col items-center absolute top-[50vh] left-[50vw] information"
       >
-        <div class="user-avatar w-[200px] h-[200px]">
+        <div class="w-[200px] h-[100px] avatar-1">
+          <img
+            alt="user avatar"
+            class="w-full h-full object-cover object-top rounded-t-full"
+            src="./public/assets/imgs/mask.jpeg"
+          />
+        </div>
+        <div class="w-[200px] h-[100px] avatar-2">
+          <img
+            alt="user avatar"
+            class="w-full h-full object-cover object-bottom rounded-b-full"
+            src="./public/assets/imgs/mask.jpeg"
+          />
+        </div>
+
+        <div class="user-avatar w-[200px] h-[200px] absolute z-[-1]">
           <img
             alt="user avatar"
             class="w-full h-full rounded-full"
-            src="https://images.unsplash.com/photo-1708395129516-6b39190332ab?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://avatars.githubusercontent.com/u/67890264?s=400&u=01382fab2302541acb3a0ef0fe65576641bc70f5&v=4"
           />
         </div>
         <h1
@@ -49,7 +53,11 @@
         <h2 class="text-white font-bold text-lg">Web developer</h2>
         <ul class="flex mt-8 socials gap-6">
           <li>
-            <a href="">
+            <a
+              href="https://github.com/ginn1111"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -70,7 +78,11 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/v%C4%83n-thu%E1%BA%ADn-47670a201/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -92,7 +104,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="" target="_blank" rel="noreferrer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -117,17 +129,16 @@
 
       <div class="container">
         <!-- ABOUT ME SECTION -->
-
-        <section class="text-primary mt-[100vh] py-[112px]">
+        <section class="text-primary mt-[100vh] py-[112px]" id="about-me">
           <h1 class="text-3xl font-bold text-center mb-20">About Me</h1>
           <div class="flex gap-4 items-start">
-            <article class="w-4/12 flex gap-4">
-              <ul class="flex flex-col justify-between">
+            <article class="w-4/12 sm:w-5/12 flex gap-4">
+              <ul class="flex flex-col justify-between text-text space-y-3">
                 <li class="font-semibold text-sm">Full Name:</li>
                 <li class="font-semibold text-sm">Phone:</li>
                 <li class="font-semibold text-sm">Email:</li>
               </ul>
-              <ul>
+              <ul class="space-y-3">
                 <li>Phạm Văn Thuận</li>
                 <li><a href="tel:+84365338185">0365338185</a></li>
                 <li>
@@ -135,44 +146,232 @@
                 </li>
               </ul>
             </article>
-            <article class="w-8/12">
+            <article class="w-8/12 sm:w-7/12 text-text space-y-3">
               <h1 class="text-2xl font-bold">Hello there!</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto laborum a ullam modi praesentium, quibusdam rerum
-                fugiat harum accusantium repudiandae, aliquid voluptates
-                similique quas quis facilis ex labore nisi aliquam.
+                I'm Thuan, a passionate junior web developer with a deep love
+                for creating more and more awesome websites that are performance
+                and impact on the users, following the best practices and
+                conventions to make the project cleaner and mainer.
+              </p>
+              <p>
+                I embarked on my web development journey with a thirst for
+                knowledge and a determination to turn ideas into digital
+                realities. With a solid foundation in HTML, CSS, JavaScript, and
+                TypeScript, I'm excited to be part of the ever-evolving world of
+                web technologies.
+              </p>
+              <p>
+                In this dynamic field, I believe in lifelong learning. I'm eager
+                to take on challenges, learn from experiences, and collaborate
+                with like-minded individuals to create innovative web solutions.
+                I want to develop my skills bread to back-end development and
+                mobile development.
               </p>
             </article>
           </div>
+
+          <div
+            class="text-center mt-[50px] my-cv max-w-max mx-auto relative border border-solid border-primary"
+          >
+            <a
+              href="https://www.topcv.vn/xem-cv/XFJUAQMDVFRbAFIEA1QEV1YGU1AAVgcGB1ZXBwdd57"
+              target="_blank"
+              rel="noreferrer"
+              class="text-xl flex items-center gap-2 justify-center px-8 py-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-paperclip"
+              >
+                <path
+                  d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"
+                />
+              </svg>
+              <p>My CV</p>
+            </a>
+          </div>
         </section>
+
         <!-- END ABOUT ME SECTION -->
 
         <!-- RESUME SECTION -->
-        <section class="text-primary py-[112px]">
+        <section class="text-primary py-[112px]" id="resume">
           <h1 class="text-3xl font-bold text-center mb-20">My Resume</h1>
+          <!-- WORK EXPERIENCE SECTION -->
           <h2
-            class="w-max mx-auto text-xl font-semibold text-center border border-primary border-solid px-4 py-2"
+            class="w-max mx-auto text-xl font-semibold text-center border border-primary border-solid px-4 py-2 tracking-widest"
           >
             Work Experience
           </h2>
-          <ul class="mt-[100px]">
-            <li>
-              <h2 class="font-bold text-2xl">Role</h2>
-              <p>Company name - time range</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Ducimus maxime a magni vitae. Blanditiis fugiat nesciunt nisi
-                pariatur placeat voluptatem magni natus soluta, nihil ab labore
-                beatae totam libero dolorem!
+          <ul
+            class="space-y-10 mt-[100px] relative after:absolute after:h-[calc(100%_+_100px)] after:w-[1px] after:bg-primary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-[50px]"
+          >
+            <li class="w-1/2">
+              <h2 class="font-bold text-2xl">FrontEnd Developer</h2>
+              <div class="relative my-4">
+                <h3 class="text-text">PayME - 04/2023 - Present</h3>
+                <div
+                  class="w-[52px] h-[52px] rounded-full bg-white p-2 absolute top-1/2 -translate-y-1/2 translate-x-1/2 right-0 z-10 -mr-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
+                >
+                  <img
+                    alt="payme"
+                    src="./public/assets/imgs/payme.png"
+                    class="w-full h-full"
+                  />
+                </div>
+              </div>
+              <p class="text-white">
+                Join a FrontEnd team to build impact web applications based on
+                the design and requirements of the operation team. Developing
+                new features, bugfix, and optimizing the performance of the
+                projects.
+              </p>
+            </li>
+
+            <li class="w-1/2 ml-auto">
+              <h2 class="font-bold text-2xl">FrontEnd Developer</h2>
+              <div class="relative my-2">
+                <h3 class="text-text">Freelancer - 08/2024 - Present</h3>
+                <div
+                  class="w-[52px] h-[52px] rounded-full bg-white p-1 absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-0 z-10 -ml-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
+                >
+                  <img
+                    alt="canalis"
+                    src="./public/assets/imgs/canalis.png"
+                    class="w-full h-full"
+                  />
+                </div>
+              </div>
+              <p class="text-white">
+                Join a team to building a news app, which helps customers to
+                accumulate points, receive discounts and events. building a web
+                management customers, who use the news app above.
+              </p>
+            </li>
+
+            <li class="w-1/2">
+              <h2 class="font-bold text-2xl">Intern FrontEnd</h2>
+              <div class="relative my-4">
+                <h3 class="text-text">GEEKUP - 11/2022 - 01/2023</h3>
+                <div
+                  class="w-[52px] h-[52px] rounded-full bg-white p-3 absolute top-1/2 -translate-y-1/2 translate-x-1/2 right-0 z-10 -mr-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
+                >
+                  <img
+                    alt="payme"
+                    src="./public/assets/imgs/geekup.ico"
+                    class="w-full h-full"
+                  />
+                </div>
+              </div>
+              <p class="text-white">
+                Join Geek Internship (GI Winter 2022). Working on Agile
+                methodology with planing, pick backlog, delivery and
+                review/retros.Build branding website depend on eCommerce
+                platform for Geek up.
               </p>
             </li>
           </ul>
-        </section>
+          <!-- END WORK EXPERIENCE SECTION -->
 
+          <!-- EDUCATION SECTION -->
+          <h2
+            class="w-max mx-auto text-xl font-semibold text-center border border-primary border-solid px-4 py-2 tracking-widest"
+          >
+            Education
+          </h2>
+          <ul
+            class="space-y-10 mt-[100px] relative after:absolute after:h-[calc(100%_+_100px)] after:w-[1px] after:bg-primary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-[20px]"
+          >
+            <li class="w-1/2">
+              <h2 class="font-bold text-2xl">Software engineering</h2>
+              <div class="relative my-4 text-text">
+                <h3 class="text-text">
+                  Posts and Telecommunications Institute of Technology
+                </h3>
+                <p>08/2019 - 01/2024</p>
+                <div
+                  class="w-[52px] h-[52px] bg-white absolute top-1/2 -translate-y-1/2 translate-x-1/2 right-0 z-10 -mr-[var(--padding-item)] rounded-full overflow-hidden shadow-[0_0_10px_5px_#56f3a2]"
+                >
+                  <img
+                    alt="ptit"
+                    src="./public/assets/imgs/ptit.png"
+                    class="w-full h-full"
+                  />
+                </div>
+              </div>
+              <p class="text-white">
+                I learned there for 4.5 years, where I acquired a foundational
+                knowledge of software engineering - from designing software
+                system (using UML) to implementation (coding). Additionally, I
+                achieved numerous scholarships throughout each term.
+              </p>
+            </li>
+          </ul>
+          <!-- END EDUCATION SECTION -->
+        </section>
         <!-- END RESUME SECTION -->
 
         <!-- SERVICE SECTION -->
+        <section class="text-primary py-[112px]" id="services">
+          <h1 class="text-3xl font-bold text-center mb-20">My Services</h1>
+          <ul class="grid grid-cols-6 gap-8">
+            <li>
+              <div class="aspect-square">
+                <img alt="html" src="./public/assets/imgs/html.png" />
+              </div>
+            </li>
+            <li>
+              <div class="aspect-square">
+                <img alt="css" src="./public/assets/imgs/css.png" />
+              </div>
+            </li>
+            <li>
+              <div class="aspect-square">
+                <img alt="js" src="./public/assets/imgs/js.png" />
+              </div>
+            </li>
+            <li>
+              <div class="aspect-square">
+                <img alt="ts" src="./public/assets/imgs/ts.png" />
+              </div>
+            </li>
+            <li>
+              <div class="aspect-square">
+                <img alt="tailwind" src="./public/assets/imgs/tailwind.png" />
+              </div>
+            </li>
+            <li>
+              <div class="aspect-square">
+                <img alt="sass" src="./public/assets/imgs/sass.png" />
+              </div>
+            </li>
+            <li>
+              <div class="aspect-square">
+                <img alt="react" src="./public/assets/imgs/react.png" />
+              </div>
+            </li>
+            <li>
+              <div class="aspect-square">
+                <img alt="redux" src="./public/assets/imgs/redux.png" />
+              </div>
+            </li>
+
+            <li>
+              <div class="aspect-square">
+                <img alt="docker" src="./public/assets/imgs/docker.png" />
+              </div>
+            </li>
+          </ul>
+        </section>
 
         <!-- END SERVICE SECTION -->
 
@@ -188,7 +387,6 @@
 
         <!-- END HIDE ME SECTION -->
       </div>
-      <div class="h-[2000px] w-full">abc</div>
     </main>
   </body>
 </html>
