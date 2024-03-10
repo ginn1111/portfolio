@@ -7,8 +7,11 @@ module.exports = {
       padding: "2rem",
     },
     extend: {
+      screens: {
+        xs: "360px",
+      },
       gridTemplateColumns: {
-        "auto-fill-350": "repeat(auto-fill, minmax(350px, 1fr))",
+        "auto-fill-350": "repeat(auto-fill, minmax(300px, 1fr))",
       },
       colors: {
         background: "#111927",

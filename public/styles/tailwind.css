@@ -152,11 +152,11 @@
 #resume > ul > li:nth-child(even).in {
   animation: slide-in-even 500ms;
 }
-#resume > ul > li:nth-child(odd).in > div > div {
+#resume > ul > li:nth-child(odd).in > div > a {
   animation-delay: 500ms;
   animation: child-slide-in-odd 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
-#resume > ul > li:nth-child(even).in > div > div {
+#resume > ul > li:nth-child(even).in > div > a {
   animation-delay: 500ms;
   animation: child-slide-in-even 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
@@ -168,6 +168,22 @@
 }
 #go-up-btn.active {
   transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+  #resume > ul > li:nth-child(odd) {
+    text-align: left;
+    padding-left: var(--padding-item);
+    padding-right: 0;
+  }
+
+  #resume > ul > li:nth-child(odd).in {
+    animation: slide-in-even 500ms;
+  }
+
+  #resume > ul > li.in > div > a {
+    animation: child-slide-in-even 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+  }
 }
 
 @keyframes slide-in-odd {

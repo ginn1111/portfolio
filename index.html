@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./public/styles/style.css" />
     <link rel="icon" href="./public/assets/imgs/mask.jpeg" />
     <script src="./js/main.js"></script>
-    <title>Ginn</title>
+    <title>ginn</title>
   </head>
   <body>
     <main class="wrapper relative">
@@ -24,14 +24,14 @@
       <div
         class="flex flex-col items-center absolute top-[50vh] left-[50vw] information"
       >
-        <div class="w-[200px] h-[100px] avatar-1">
+        <div class="md:w-[200px] md:h-[100px] w-[160px] h-[80px] avatar-1">
           <img
             alt="user avatar"
             class="w-full h-full object-cover object-top rounded-t-full"
             src="./public/assets/imgs/mask.jpeg"
           />
         </div>
-        <div class="w-[200px] h-[100px] avatar-2">
+        <div class="md:w-[200px] md:h-[100px] w-[160px] h-[80px] avatar-2">
           <img
             alt="user avatar"
             class="w-full h-full object-cover object-bottom rounded-b-full"
@@ -39,7 +39,9 @@
           />
         </div>
 
-        <div class="user-avatar w-[200px] h-[200px] absolute z-[-1]">
+        <div
+          class="user-avatar md:w-[200px] md:h-[200px] w-[160px] h-[160px] absolute z-[-1]"
+        >
           <img
             alt="user avatar"
             class="w-full h-full rounded-full"
@@ -47,7 +49,7 @@
           />
         </div>
         <h1
-          class="font-script font-bold text-[50px] text-white -rotate-6 mt-1 relative after:absolute after:h-[6px] after:w-6 after:bg-white after:left-0 after:top-1/2 after:-translate-y-1/2 after:-translate-x-[110%] before:absolute before:h-[6px] before:w-6 before:bg-white before:right-0 before:top-1/2 before:-translate-y-1/2 before:translate-x-[120%]"
+          class="font-script font-bold md:text-[50px] text-white -rotate-6 mt-1 relative after:absolute after:h-1 after:md:h-[6px] after:md:w-6 after:w-4 after:bg-white after:left-0 after:top-1/2 after:-translate-y-1/2 after:-translate-x-[110%] before:absolute before:md:h-[6px] before:h-1 before:w-4 before:md:w-6 before:bg-white before:right-0 before:top-1/2 before:-translate-y-1/2 before:translate-x-[120%] text-[28px] mb-4"
         >
           Phạm Văn Thuận
         </h1>
@@ -105,7 +107,11 @@
             </a>
           </li>
           <li>
-            <a href="" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/vanthuan1309"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -132,14 +138,20 @@
         <!-- ABOUT ME SECTION -->
         <section class="text-primary mt-[100vh] py-[112px]" id="about-me">
           <h1 class="text-3xl font-bold text-center mb-20">About Me</h1>
-          <div class="flex gap-4 items-start">
-            <article class="w-4/12 sm:w-5/12 flex gap-4">
-              <ul class="flex flex-col justify-between text-text space-y-3">
+          <div
+            class="flex gap-8 items-center md:items-start justify-center flex-col md:flex-row"
+          >
+            <article
+              class="flex gap-4 justify-between lg:w-4/12 md:w-5/12 w-full"
+            >
+              <ul
+                class="flex flex-col justify-between text-text space-y-3 flex-none md:ml-auto"
+              >
                 <li class="font-semibold text-sm">Full Name:</li>
                 <li class="font-semibold text-sm">Phone:</li>
                 <li class="font-semibold text-sm">Email:</li>
               </ul>
-              <ul class="space-y-3">
+              <ul class="space-y-3 md:text-end">
                 <li>Phạm Văn Thuận</li>
                 <li><a href="tel:+84365338185">0365338185</a></li>
                 <li>
@@ -147,7 +159,7 @@
                 </li>
               </ul>
             </article>
-            <article class="w-8/12 sm:w-7/12 text-text space-y-3">
+            <article class="lg:w-8/12 md:w-7/12 text-text space-y-3 w-full">
               <h1 class="text-2xl font-bold">Hello there!</h1>
               <p>
                 I'm Thuan, a passionate junior web developer with a deep love
@@ -209,26 +221,29 @@
           <h1 class="text-3xl font-bold text-center mb-20">My Resume</h1>
           <!-- WORK EXPERIENCE SECTION -->
           <h2
-            class="w-max mx-auto text-xl font-semibold text-center border border-primary border-solid px-4 py-2 tracking-widest"
+            class="md:w-max w-full md:mx-auto text-xl font-semibold text-center border border-primary border-solid px-4 py-2 tracking-widest"
           >
             Work Experience
           </h2>
           <ul
-            class="space-y-10 mt-[100px] relative after:absolute after:h-[calc(100%_+_100px)] after:w-[1px] after:bg-primary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-[50px]"
+            class="space-y-10 mt-[100px] relative after:absolute after:h-[calc(100%_+_100px)] after:w-[1px] after:bg-primary after:bottom-0 md:after:left-1/2 after:left-0 after:md:-translate-x-1/2 pb-[50px]"
           >
-            <li class="w-1/2">
+            <li class="md:w-1/2 w-full">
               <h2 class="font-bold text-2xl">FrontEnd Developer</h2>
               <div class="relative my-4">
                 <h3 class="text-text">PayME - 04/2023 - Present</h3>
-                <div
-                  class="w-[52px] h-[52px] rounded-full bg-white p-2 absolute top-1/2 -translate-y-1/2 translate-x-1/2 right-0 z-10 -mr-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
+                <a
+                  href="https://payme.vn/"
+                  target="_blank"
+                  rel="noopener"
+                  class="w-[52px] h-[52px] rounded-full bg-white p-2 absolute top-1/2 -translate-y-1/2 md:translate-x-1/2 -translate-x-1/2 md:right-0 md:left-auto left-0 z-10 md:-mr-[var(--padding-item)] -ml-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
                 >
                   <img
                     alt="payme"
                     src="./public/assets/imgs/payme.png"
                     class="w-full h-full"
                   />
-                </div>
+                </a>
               </div>
               <p class="text-white">
                 Join a FrontEnd team to build impact web applications based on
@@ -238,11 +253,14 @@
               </p>
             </li>
 
-            <li class="w-1/2 ml-auto">
+            <li class="md:w-1/2 md:ml-auto w-full">
               <h2 class="font-bold text-2xl">FrontEnd Developer</h2>
               <div class="relative my-2">
                 <h3 class="text-text">Freelancer - 08/2024 - Present</h3>
-                <div
+                <a
+                  href="https://chillvietnam.com/canalis-bar-quan-3/"
+                  target="_blank"
+                  rel="noopener"
                   class="w-[52px] h-[52px] rounded-full bg-white p-1 absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-0 z-10 -ml-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
                 >
                   <img
@@ -250,7 +268,7 @@
                     src="./public/assets/imgs/canalis.png"
                     class="w-full h-full"
                   />
-                </div>
+                </a>
               </div>
               <p class="text-white">
                 Join a team to building a news app, which helps customers to
@@ -259,19 +277,22 @@
               </p>
             </li>
 
-            <li class="w-1/2">
+            <li class="md:w-1/2 w-full">
               <h2 class="font-bold text-2xl">Intern FrontEnd</h2>
               <div class="relative my-4">
                 <h3 class="text-text">GEEKUP - 11/2022 - 01/2023</h3>
-                <div
-                  class="w-[52px] h-[52px] rounded-full bg-white p-3 absolute top-1/2 -translate-y-1/2 translate-x-1/2 right-0 z-10 -mr-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
+                <a
+                  href="https://geekup.vn/"
+                  target="_blank"
+                  rel="noopener"
+                  class="w-[52px] h-[52px] rounded-full bg-white p-2 absolute top-1/2 -translate-y-1/2 md:translate-x-1/2 -translate-x-1/2 md:right-0 md:left-auto left-0 z-10 md:-mr-[var(--padding-item)] -ml-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
                 >
                   <img
                     alt="payme"
                     src="./public/assets/imgs/geekup.ico"
                     class="w-full h-full"
                   />
-                </div>
+                </a>
               </div>
               <p class="text-white">
                 Join Geek Internship (GI Winter 2022). Working on Agile
@@ -285,35 +306,38 @@
 
           <!-- EDUCATION SECTION -->
           <h2
-            class="w-max mx-auto text-xl font-semibold text-center border border-primary border-solid px-4 py-2 tracking-widest"
+            class="md:w-max md:mx-auto w-full text-xl font-semibold text-center border border-primary border-solid px-4 py-2 tracking-widest"
           >
             Education
           </h2>
           <ul
-            class="space-y-10 mt-[100px] relative after:absolute after:h-[calc(100%_+_100px)] after:w-[1px] after:bg-primary after:bottom-0 after:left-1/2 after:-translate-x-1/2 pb-[20px]"
+            class="space-y-10 mt-[100px] relative after:absolute after:h-[calc(100%_+_100px)] after:w-[1px] after:bg-primary after:bottom-0 after:md:left-1/2 after:left-0 after:md:-translate-x-1/2 pb-[20px]"
           >
-            <li class="w-1/2">
+            <li class="md:w-1/2 w-full">
               <h2 class="font-bold text-2xl">Software engineering</h2>
               <div class="relative my-4 text-text">
                 <h3 class="text-text">
                   Posts and Telecommunications Institute of Technology
                 </h3>
                 <p>08/2019 - 01/2024</p>
-                <div
-                  class="w-[52px] h-[52px] bg-white absolute top-1/2 -translate-y-1/2 translate-x-1/2 right-0 z-10 -mr-[var(--padding-item)] rounded-full overflow-hidden shadow-[0_0_10px_5px_#56f3a2]"
+                <a
+                  href="https://ptithcm.edu.vn/"
+                  target="_blank"
+                  rel="noopener"
+                  class="w-[52px] h-[52px] rounded-full bg-white p-2 absolute top-1/2 -translate-y-1/2 md:translate-x-1/2 -translate-x-1/2 md:right-0 md:left-auto left-0 z-10 md:-mr-[var(--padding-item)] -ml-[var(--padding-item)] shadow-[0_0_10px_5px_#56f3a2]"
                 >
                   <img
                     alt="ptit"
                     src="./public/assets/imgs/ptit.png"
                     class="w-full h-full"
                   />
-                </div>
+                </a>
               </div>
               <p class="text-white">
                 I learned there for 4.5 years, where I acquired a foundational
                 knowledge of software engineering - from designing software
-                system (using UML) to implementation (coding). Additionally, I
-                achieved numerous scholarships throughout each term.
+                system () to implementation (coding). Additionally, I achieved
+                numerous scholarships throughout each term.
               </p>
             </li>
           </ul>
@@ -568,7 +592,7 @@
               </ul>
               <div class="flex items-center gap-4 py-2 justify-end">
                 <a
-                  href="https://project-management-client-eight.vercel.app/"
+                  href="https://project-management-client-eight.vercel.app/authen"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full p-1 text-primary bg-background w-8 h-8 grid place-items-center shadow-[0_0_10px_2px_#111927,inset_0_0_4px_0.5px_#56f3a2]"
@@ -690,7 +714,7 @@
               </ul>
               <div class="flex items-center gap-4 py-2 justify-end">
                 <a
-                  href="https://medusa-storefront-eight.vercel.app"
+                  href="https://ginn-storefront.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full p-1 text-primary bg-background w-8 h-8 grid place-items-center shadow-[0_0_10px_2px_#111927,inset_0_0_4px_0.5px_#56f3a2]"
@@ -818,15 +842,50 @@
         <!-- INTERESTING SECTION-->
         <section class="text-primary py-[112px] !min-h-max" id="interesting">
           <h1 class="text-3xl font-bold text-center mb-20">Interesting</h1>
+          <ul class="max-w-[600px] mx-auto grid grid-cols-1 gap-4">
+            <li>
+              <div class="flex items-center gap-2">
+                <h2 class="font-bold text-xl">Neovim</h2>
+              </div>
+              <p class="text-text mt-1 flex gap-2">
+                I'm a big fan of editor, it help me boots up productivity on
+                coding via keybinding, shortcut, ... with awesome feature like
+                move around of editor fast or jump over the tab without the
+                cursor!
+              </p>
+              <a
+                class="block ml-auto max-w-max text-sm"
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/ginn1111/d0t_file"
+              >
+                my dotfile &lt;/&gt;
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center gap-2">
+                <h2 class="font-bold text-xl">Productive in working</h2>
+              </div>
+              <p class="text-text mt-1">
+                I always read some blogs, technical document to update and
+                refresh my skills set. In additional, I also want to reach in
+                another role (which related with current role) to have a
+                overview in my career.
+              </p>
+              <a href="https://app.daily.dev/ginn"
+                ><img
+                  src="https://api.daily.dev/devcards/v2/FEmttsb9Yeh3lpZ0SzGIu.png?r=r85&type=wide"
+                  width="652"
+                  alt="Phạm Văn Thuận's Dev Card"
+              /></a>
+            </li>
+          </ul>
         </section>
         <!-- END INTERESTING SECTION-->
-
-        <!-- HIRE ME SECTION -->
-
-        <!-- END HIRE ME SECTION -->
       </div>
     </main>
 
+    <!-- GO TO TOP BUTTON-->
     <button
       id="go-up-btn"
       class="fixed bottom-8 right-8 bg-primary p-4 rounded-full translate-x-[200%]"
