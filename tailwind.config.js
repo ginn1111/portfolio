@@ -11,7 +11,7 @@ module.exports = {
         xs: "360px",
       },
       gridTemplateColumns: {
-        "auto-fill-350": "repeat(auto-fill, minmax(300px, 1fr))",
+        "auto-fit-300": "repeat(auto-fit, minmax(300px, 1fr))",
       },
       colors: {
         background: "#111927",

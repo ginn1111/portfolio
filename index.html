@@ -12,6 +12,7 @@
     <main class="wrapper relative">
       <!-- HERO SECTION -->
       <div
+        id="hero"
         class="w-screen h-screen bg-img after:absolute after:inset-0 after:bg-primary after:opacity-40 blur-sm"
       >
         <img
@@ -346,7 +347,7 @@
         <!-- END RESUME SECTION -->
 
         <!-- SKILL SECTION -->
-        <section class="text-primary py-[112px] !min-h-max" id="skills">
+        <section class="text-primary py-[112px] !min-h-max mb-10" id="skills">
           <h1 class="text-3xl font-bold text-center mb-20">My Skills</h1>
           <ul
             class="flex gap-8 flex-wrap-reverse max-w-[768px] mx-auto justify-center"
@@ -516,7 +517,7 @@
         <!-- PROJECT SECTION -->
         <section class="text-primary py-[112px]" id="projects">
           <h1 class="text-3xl font-bold text-center mb-20">Side Projects</h1>
-          <ul class="grid grid-cols-auto-fill-350 gap-x-8 gap-y-16">
+          <ul class="grid grid-cols-auto-fit-300 gap-x-8 gap-y-16">
             <!-- Project Management -->
             <li
               class="bg-primary group relative px-8 py-4 shadow-[5px_5px_0_#a4b1cd] text-background cursor-pointer hover:shadow-[0_0_0] transition-all after:absolute after:w-full after:h-full after:top-0 after:left-0 hover:after:top-[-5px] hover:after:left-[-5px] after:transition-all after:opacity-0 hover:after:opacity-100 after:border-text after:border-solid after:border-b-0 after:border-r-0 after:border-[4px] after:z-[-1] flex flex-col"
@@ -888,7 +889,7 @@
     <!-- GO TO TOP BUTTON-->
     <button
       id="go-up-btn"
-      class="fixed bottom-8 right-8 bg-primary p-4 rounded-full translate-x-[200%]"
+      class="fixed bottom-16 right-8 bg-primary p-4 rounded-full translate-x-[200%] shadow-background shadow-sm"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -906,5 +907,39 @@
         <path d="M12 2V22" />
       </svg>
     </button>
+    <nav
+      class="fixed bottom-4 py-1 px-1 left-1/2 -translate-x-1/2 rounded-3xl bg-primary/50 backdrop-blur-md w-max shadow-background/50 shadow-sm translate-y-[calc(100%_+_16px)] transition-all duration-500"
+    >
+      <p
+        id="indicator"
+        class="absolute h-[calc(100%_-_8px)] bg-background rounded-3xl z-10 transition-all duration-500 left-0 w-0"
+      ></p>
+      <ul class="flex items-center text-background relative z-20">
+        <li
+          id="about-me-nav"
+          class="flex-none text-sm font-semibold py-1 px-2 text-background"
+        >
+          <a href="#about-me">About me</a>
+        </li>
+        <li
+          id="resume-nav"
+          class="flex-none text-sm font-semibold py-1 px-2 text-background"
+        >
+          <a href="#resume">My resume</a>
+        </li>
+        <li
+          id="skills-nav"
+          class="flex-none text-sm font-semibold py-1 px-2 text-background"
+        >
+          <a href="#skills">My skills</a>
+        </li>
+        <li
+          id="projects-nav"
+          class="flex-none text-sm font-semibold py-1 px-2 text-background"
+        >
+          <a href="#projects">Side projects</a>
+        </li>
+      </ul>
+    </nav>
   </body>
 </html>

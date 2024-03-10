@@ -623,12 +623,20 @@ html {
   position: relative;
 }
 
-.bottom-8{
-  bottom: 2rem;
+.bottom-16{
+  bottom: 4rem;
+}
+
+.bottom-4{
+  bottom: 1rem;
 }
 
 .left-0{
   left: 0px;
+}
+
+.left-1\/2{
+  left: 50%;
 }
 
 .left-\[50vw\]{
@@ -655,6 +663,10 @@ html {
   z-index: 10;
 }
 
+.z-20{
+  z-index: 20;
+}
+
 .z-\[-1\]{
   z-index: -1;
 }
@@ -676,6 +688,10 @@ html {
 
 .-ml-\[var\(--padding-item\)\]{
   margin-left: calc(var(--padding-item) * -1);
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .mb-20{
@@ -750,6 +766,10 @@ html {
   height: 80px;
 }
 
+.h-\[calc\(100\%_-_8px\)\]{
+  height: calc(100% - 8px);
+}
+
 .h-full{
   height: 100%;
 }
@@ -761,6 +781,10 @@ html {
 .\!min-h-max{
   min-height: -moz-max-content !important;
   min-height: max-content !important;
+}
+
+.w-0{
+  width: 0px;
 }
 
 .w-8{
@@ -777,6 +801,11 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-max{
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .w-screen{
@@ -823,6 +852,11 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-\[calc\(100\%_\+_16px\)\]{
+  --tw-translate-y: calc(100% + 16px);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-full{
   --tw-translate-y: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -841,8 +875,8 @@ html {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-auto-fill-350{
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.grid-cols-auto-fit-300{
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .flex-col{
@@ -910,6 +944,10 @@ html {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
+.rounded-3xl{
+  border-radius: 1.5rem;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -954,6 +992,10 @@ html {
 .bg-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(86 243 162 / var(--tw-bg-opacity));
+}
+
+.bg-primary\/50{
+  background-color: rgb(86 243 162 / 0.5);
 }
 
 .bg-white{
@@ -1012,6 +1054,16 @@ html {
   padding: 1rem;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1020,6 +1072,11 @@ html {
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2{
@@ -1136,9 +1193,31 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-background{
+  --tw-shadow-color: #111927;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-background\/50{
+  --tw-shadow-color: rgb(17 25 39 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .blur-sm{
   --tw-blur: blur(4px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-md{
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .transition-all{
@@ -1149,6 +1228,10 @@ html {
 
 .duration-1000{
   transition-duration: 1000ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
 }
 
 .wrapper {
@@ -1327,6 +1410,14 @@ html {
   #resume > ul > li.in > div > a {
     animation: child-slide-in-even 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
   }
+}
+
+nav.active {
+  transform: translateX(-50%) translateY(0);
+}
+
+nav li.active {
+  color: #56f3a2 !important;
 }
 
 @keyframes slide-in-odd {
