@@ -62,7 +62,7 @@ function navIntersection(idNav, idIntersection, callback) {
 
           navItem.classList.add("active");
           indicator.style.left = offsetLeft + 4 + "px";
-          indicator.style.width = offsetWidth - 4 + "px";
+          indicator.style.width = offsetWidth + "px";
         } else {
           this.unobserve(entry);
         }
