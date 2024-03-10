@@ -88,9 +88,7 @@ function resetActiveIndicator() {
 function throttle(fn, ms) {
   let now = new Date().getTime();
   return (...args) => {
-    console.log(new Date().getTime() - now, ms);
     if (new Date().getTime() - now >= ms) {
-      console.log("call");
       fn(...args);
       now = new Date().getTime();
     }
