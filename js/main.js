@@ -42,9 +42,9 @@
 
     navIntersection("", "interesting", () => {
       resetActiveIndicator();
-      document.querySelector("nav").classList.remove("active");
     });
-    navIntersection("", "end", () => {
+
+    navIntersection("", "footer", () => {
       resetActiveIndicator();
       document.querySelector("nav").classList.remove("active");
     });
@@ -76,7 +76,9 @@ function navIntersection(idNav, idIntersection, callback) {
         }
       });
     },
-    { threshold: 0.25 },
+    {
+      threshold: 0.25,
+    },
   ).observe(document.getElementById(idIntersection));
 }
 
