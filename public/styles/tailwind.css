@@ -163,6 +163,21 @@
 #resume > ul > li:nth-child(even) {
   padding-left: var(--padding-item);
 }
+#side-projects > ul > li:hover {
+  box-shadow: none;
+}
+#side-projects > ul > li:hover + div {
+  background-position: bottom;
+}
+#side-projects > ul > li:hover + ul {
+  transform: translateY(calc(100% + 8px));
+}
+#side-projects > ul > li:hover::after {
+  top: -5px;
+  left: -5px;
+  opacity: 1;
+}
+
 #go-up-btn {
   transition: 400ms;
 }
