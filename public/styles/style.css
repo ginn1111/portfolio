@@ -1164,6 +1164,10 @@ html {
   line-height: 1.75rem;
 }
 
+.text-\[24px\]{
+  font-size: 24px;
+}
+
 .font-bold{
   font-weight: 700;
 }
