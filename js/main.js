@@ -40,7 +40,15 @@
     navIntersection("skills-nav", "skills");
     navIntersection("projects-nav", "projects");
 
-    navIntersection("", "interesting", resetActiveIndicator);
+    navIntersection("", "interesting", () => {
+      resetActiveIndicator();
+      document.querySelector("nav").classList.remove("active");
+    });
+    navIntersection("", "end", () => {
+      resetActiveIndicator();
+      document.querySelector("nav").classList.remove("active");
+    });
+
     navIntersection("", "hero", resetActiveIndicator);
   });
 })();

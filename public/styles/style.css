@@ -1059,6 +1059,11 @@ html {
   padding-right: 0.25rem;
 }
 
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1098,8 +1103,24 @@ html {
   padding-bottom: 20px;
 }
 
+.pb-\[24px\]{
+  padding-bottom: 24px;
+}
+
 .pb-\[50px\]{
   padding-bottom: 50px;
+}
+
+.pb-\[52px\]{
+  padding-bottom: 52px;
+}
+
+.pl-\[52px\]{
+  padding-left: 52px;
+}
+
+.pt-\[112px\]{
+  padding-top: 112px;
 }
 
 .text-center{
